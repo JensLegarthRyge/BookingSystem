@@ -7,23 +7,32 @@ import java.text.*;
 public class BookingSystem {
     static Scanner scanner = new Scanner(System.in);
     static ArrayList<Event> eventsCreated = new ArrayList<Event>();
-
+    static boolean exitGame = false;
     public static void main(String[] args) {
-        startProgram();
+        while (exitGame==false){
+            startProgram();
+        }
+
     }
 
     static void startProgram() {
         boolean validation = false;
         System.out.println("Welcome to Event Planner 2000");
         System.out.println("\nCreate new event - Press 1\n" +
-                "See all upcoming events - Press 2");
+                "See all upcoming events - Press 2\n"+
+                "Exit program - Press 3");
         String userChoice = scanner.next();
         do {
             if(userChoice.equals("1")){
                 validation=true;
                 createNewEvent();
-            } else if (userChoice.equals("2")){
-                validation=true;
+            } else if (userChoice.equals("2")) {
+                printAllEvents();
+                validation = true;
+
+            } else if (userChoice.equals("3")) {
+                validation = true;
+                exitGame = true;
             } else{
                 System.out.println("Invalid input - Please enter valid input");
                 userChoice= scanner.next();
@@ -87,5 +96,12 @@ public class BookingSystem {
             sum+=actLineupArray[i].getPrice();
         }
         return sum/capacity;
+    }
+
+    static void printAllEvents(){
+        Event[] bla = eventsCreated.toArray(new Event[eventsCreated.size()]);
+        for (int i = 0; i < bla.length; i++) {
+            System.out.println(bla[i].toString());
+        }
     }
 }
