@@ -1,4 +1,5 @@
 public class Event {
+    //Jens
     private final String eventName;
     private final int ticketAmount;
     private final Venue venue;
