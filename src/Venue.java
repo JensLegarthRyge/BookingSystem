@@ -1,11 +1,16 @@
 public class Venue {
-    private String venueName;
-    private String venueAddress;
-    private int venueCapacity;
+    private final String venueName;
+    private final String venueAddress;
 
     public Venue(String venueName, String venueAddress, int venueCapacity) {
         this.venueName = venueName;
         this.venueAddress = venueAddress;
-        this.venueCapacity = venueCapacity;
+    }
+
+    public String getVenueName() {
+        return venueName;
+    }
+    public String getVenueAddress() {
+        return venueAddress;
     }
 }

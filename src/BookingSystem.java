@@ -6,10 +6,10 @@ import java.text.*;
 
 public class BookingSystem {
     static Scanner scanner = new Scanner(System.in);
-    static ArrayList<Event> eventsCreated = new ArrayList<Event>();
+    static ArrayList<Event> eventsCreated = new ArrayList<>();
     static boolean exitGame = false;
     public static void main(String[] args) {
-        while (exitGame==false){
+        while (!exitGame){
             startProgram();
         }
 
@@ -99,9 +99,9 @@ public class BookingSystem {
     }
 
     static void printAllEvents(){
-        Event[] bla = eventsCreated.toArray(new Event[eventsCreated.size()]);
-        for (int i = 0; i < bla.length; i++) {
-            System.out.println(bla[i].toString());
+        Event[] eventsInArrayList = eventsCreated.toArray(new Event[eventsCreated.size()]);
+        for (Event event : eventsInArrayList) {
+            System.out.println(event.toString());
         }
     }
 }

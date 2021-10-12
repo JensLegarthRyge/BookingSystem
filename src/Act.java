@@ -1,9 +1,9 @@
 import java.util.Date;
 
 public class Act {
-    private String actName;
-    private int actPrice;
-    private Date actStartTime;
+    private final String actName;
+    private final int actPrice;
+    private final Date actStartTime;
 
     public Act(String actName, int actPrice, Date actStartTime) {
         this.actName = actName;
