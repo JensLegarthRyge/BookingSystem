@@ -77,13 +77,13 @@ public class BookingSystem {
     static Date getDate(){
         //https://codegym.cc/groups/posts/parse-methods-in-java?fbclid=IwAR10UVq34Njts7qZsppYUeWVasBkGok2X5uFmw_X4xajDq5QiQh8XB66t5c
         System.out.println("YYYY-MM-DD HH:MM");
-        String date = getStringInput();
+        String dateFromUser = getStringInput();
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 
         Date formattedDate = null;
         try{
-            formattedDate = format.parse(date);
+            formattedDate = format.parse(dateFromUser);
         } catch (ParseException e){
             e.printStackTrace();
         }
