@@ -24,6 +24,7 @@ public class Event {
                 "\nSchedule for the event is as follows:\n"+printSchedule();
     }
     public String printSchedule(){
+        //A loop that prints the acts that are performing and prints them out
         String scheduleFormatted ="";
         for (int i = 0; i < this.act.length; i++) {
             scheduleFormatted += "Act name: "+this.act[i].getActName()+"\n"+
